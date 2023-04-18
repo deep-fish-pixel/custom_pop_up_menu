@@ -233,13 +233,7 @@ class _CustomPopupMenuState extends State<CustomPopupMenu> {
     if (Platform.isIOS) {
       return child;
     } else {
-      return WillPopScope(
-        onWillPop: () {
-          _hideMenu();
-          return Future.value(true);
-        },
-        child: child,
-      );
+      return child;
     }
   }
 }
